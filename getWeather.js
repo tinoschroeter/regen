@@ -1,10 +1,8 @@
 import geoip from "geoip-lite";
 import weather from "weather-js";
-import morgan from "morgan";
 
 const getWeather = (req, res) => {
   const ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress;
-  //const ip = "31.16.210.209";
   const geo = geoip.lookup(ip);
 
   if (!geo) return res.json({ rain: "error", text: "Keine IP" });

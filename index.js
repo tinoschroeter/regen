@@ -1,5 +1,3 @@
-import geoip from "geoip-lite";
-import weather from "weather-js";
 import express from "express";
 import morgan from "morgan";
 import getWeather from "./getWeather.js";
