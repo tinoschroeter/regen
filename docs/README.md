@@ -14,4 +14,4 @@ Sehr einfache Wetter App, sie zeigt nur ob es regnet...
 
 
 <img src="https://www.verlo.com/wp-content/uploads/2019/03/rainy_day.jpg" align="left"
-     alt="NOC" width="769" height="511">
+     alt="rain" width="769" height="511">

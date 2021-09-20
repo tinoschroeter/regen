@@ -12,17 +12,23 @@
   </head>
   <body>
     <div>
-      <h1 id="txt"></h1>
+      <p id="temp"></p>
+      <h1 id="rain"></h1>
+      <p id="city"></p>
     </div>
 
     <script>
-      const txt = document.querySelector("#txt");
+      const rain = document.querySelector("#rain");
+      const city = document.querySelector("#city");
+      const temp = document.querySelector("#temp");
 
       fetch("/api")
         .then((response) => response.json())
         .then((data) => {
           console.log(data);
-          txt.innerText = data.text;
+          rain.innerText = data.text;
+          city.innerText = data.city;
+          temp.innerText = data.temperature + "℃";
         });
     </script>
   </body>
