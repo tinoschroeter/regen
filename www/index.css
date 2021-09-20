@@ -8,8 +8,8 @@ body {
     text-shadow: .2em .2em 0 rgba(0,0,0,0.3);
     font-size: 1.3em;
     min-height: 100vh;
-    margin: 0;
-    background-image: linear-gradient(to right top, #99bbcb, #a5c7d7, #b1d4e2, #bde0ee, #c9edfa);
+    margin: 10px;
+    background-image: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
 }
 h1 {
     margin: 0 auto;
@@ -21,6 +21,7 @@ h1 {
 }
 
 p {
-    margin: 0px;
     font-size: 1.5em;
+    text-align: left;
+    margin: 2px;
 }
