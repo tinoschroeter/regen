@@ -12,14 +12,18 @@ const getWeather = (req, res) => {
   weather.find(search, (err, result) => {
     if (err) console.log(err);
 
-    const weatherTxt = result[0].current.skytext;
-    const rainy = weatherTxt.match(/[rR]ain/g);
+    const rainy = result[0].current.skytext.match(/[rR]ain/g);
+    const weather = result[0].current;
 
-    if (rainy) {
-      return res.json({ rain: true, text: "Ja", city: geo.city });
-    } else {
-      return res.json({ rain: false, text: "Nein", city: geo.city });
-    }
+    const info = {
+      text: rainy ? "Ja" : "Nein",
+      city: geo.city,
+      temperature: weather.temperature,
+      humidity: weather.humidity,
+      windspeed: weather.windspeed,
+    };
+
+    return res.json(info);
 
     res.json({ rain: "error", text: "Fehler" });
   });
