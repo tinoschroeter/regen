@@ -22,14 +22,19 @@
       const city = document.querySelector("#city");
       const temp = document.querySelector("#temp");
 
-      fetch("/api")
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(data);
-          rain.innerText = data.text;
-          city.innerText = data.city;
-          temp.innerText = data.temperature + "℃";
-        });
+      const getData = () => {
+        fetch("/api")
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            rain.innerText = data.text;
+            city.innerText = data.city;
+            temp.innerText = data.temperature + "℃";
+          });
+      };
+
+      getData();
+      setInterval(() => getData(), 30 * 1000);
     </script>
   </body>
 </html>
