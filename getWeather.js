@@ -10,17 +10,19 @@ const getWeather = (req, res) => {
   const search = { search: geo.city, degreeType: "C" };
 
   weather.find(search, (err, result) => {
-    if (err) console.log(err);
+    if (err) console.error(err);
 
     const rainy = result[0].current.skytext.match(/[rR]ain/g);
     const weather = result[0].current;
 
     const info = {
       text: rainy ? "Ja" : "Nein",
+      rain: rainy ? true : false,
       city: geo.city,
       temperature: weather.temperature,
       humidity: weather.humidity,
       windspeed: weather.windspeed,
+      skytext: weather.skytext
     };
 
     return res.json(info);
