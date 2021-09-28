@@ -1,4 +1,4 @@
-FROM node:14-slim
+FROM node:16.9.1-slim
 RUN apt-get  update && apt-get install --yes locales
 
 WORKDIR /app
