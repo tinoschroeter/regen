@@ -1,9 +1,11 @@
 import express from "express";
 import morgan from "morgan";
+import helmet from "helmet";
 import getWeather from "./getWeather.js";
 
 const app = express();
 
+app.use(helmet());
 app.use(morgan("combined"));
 app.use(express.static("www"));
 

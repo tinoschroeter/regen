@@ -21,6 +21,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "geoip-lite": "^1.4.2",
+    "helmet": "^4.6.0",
     "morgan": "^1.10.0",
     "weather-js": "^2.0.0"
   }
