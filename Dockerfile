@@ -1,5 +1,4 @@
 FROM node:16.13.1-bullseye-slim
-RUN apt-get  update && apt-get install --yes locales
 
 WORKDIR /app
 
