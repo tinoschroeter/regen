@@ -15,4 +15,4 @@ Sehr einfache Wetter App, sie zeigt nur ob es regnet...
 * geoip-lite
 * weather-js
 
-![man in rain](https://www.verlo.com/wp-content/uploads/2019/03/rainy_day.jpg)
+![man in rain](https://img.tino.sh/rain.gif)
