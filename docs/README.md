@@ -12,7 +12,7 @@ Sehr einfache Wetter App, sie zeigt nur ob es regnet...
 
 ## NPM Module
 
-* geoip-lite
-* weather-js
+- geoip-lite
+- @tinoschroeter/weather-js
 
 ![man in rain](https://img.tino.sh/rain.gif)
